@@ -69,7 +69,13 @@ function App() {
   return (
     <div className="bg-gray-100 min-h-screen">
       <header className="flex justify-between items-center p-4 bg-gray-800 text-white">
-        <h1 className="text-xl ml-[300px]">React Shopping Cart</h1>
+        <h1 className="text-xl ">React Shopping Cart</h1>
+         <button 
+        onClick={() => setSubscriptionModalVisible(true)} 
+        className=" bg-green-800 text-white py-2 px-4 rounded-lg  hover:bg-green-900"
+      >
+        Subscribe to a Plan
+      </button>
         <button onClick={toggleCart} className="relative">
           <span className="text-xl">🛒</span>
           {cart.length > 0 && (
@@ -97,12 +103,7 @@ function App() {
       </div>
 
      
-      <button 
-        onClick={() => setSubscriptionModalVisible(true)} 
-        className="mt-6 bg-green-800 text-white py-2 px-4 rounded-lg ml-[198px] hover:bg-green-900"
-      >
-        Subscribe to a Plan
-      </button>
+     
 
      
       {subscriptionModalVisible && (
