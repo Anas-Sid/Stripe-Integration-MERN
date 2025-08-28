@@ -87,25 +87,20 @@ app.post('/create-payment-session', async (req, res) => {
 app.post('/create-subscription-session', async (req, res) => {
   try {
     const { plan } = req.body;
-
-    // Determine the price ID based on the selected plan
     const priceId = plan === 'basic' ? 'price_1S16lADkpi1Al2fcUaXkUFe9' : 'price_1S16lbDkpi1Al2fcYc1dyfQw';
-
-    // Create the Stripe Checkout session for subscription
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
       line_items: [
         {
-          price: priceId, // Use the correct price ID (Basic or Premium)
+          price: priceId, 
           quantity: 1,
         },
       ],
-      mode: 'subscription', // Set the mode to 'subscription' for recurring billing
-      success_url: `${process.env.FRONTEND_URL}/success?session_id={CHECKOUT_SESSION_ID}`,
+      mode: 'subscription', 
+      success_url: `${process.env.FRONTEND_URL}/success`,
       cancel_url: `${process.env.FRONTEND_URL}/cancel`,
     });
 
-    // Respond with the session ID to the frontend
     res.json({ sessionId: session.id });
   } catch (err) {
     console.error('Error creating subscription session:', err);
