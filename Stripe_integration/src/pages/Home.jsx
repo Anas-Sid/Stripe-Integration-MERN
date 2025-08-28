@@ -12,6 +12,12 @@ function App() {
     { id: 1, name: 'Product 1', price: 25, image: 'https://i.pinimg.com/1200x/a6/42/4e/a6424e9550e01b5571b4dae2c76e855d.jpg' },
     { id: 2, name: 'Product 2', price: 40, image: 'https://i.pinimg.com/1200x/e4/b7/5b/e4b75b8e929a9f9ca16943e7f7597e5a.jpg' },
     { id: 3, name: 'Product 3', price: 50, image: 'https://i.pinimg.com/1200x/1b/25/fe/1b25fe26b62a75e9abb4b1c53e18e154.jpg' },
+    { id: 4, name: 'Product 1', price: 25, image: 'https://i.pinimg.com/1200x/a6/42/4e/a6424e9550e01b5571b4dae2c76e855d.jpg' },
+    { id: 5, name: 'Product 2', price: 40, image: 'https://i.pinimg.com/1200x/e4/b7/5b/e4b75b8e929a9f9ca16943e7f7597e5a.jpg' },
+    { id: 6, name: 'Product 3', price: 50, image: 'https://i.pinimg.com/1200x/1b/25/fe/1b25fe26b62a75e9abb4b1c53e18e154.jpg' },
+    { id: 7, name: 'Product 1', price: 25, image: 'https://i.pinimg.com/1200x/a6/42/4e/a6424e9550e01b5571b4dae2c76e855d.jpg' },
+    { id: 8, name: 'Product 2', price: 40, image: 'https://i.pinimg.com/1200x/e4/b7/5b/e4b75b8e929a9f9ca16943e7f7597e5a.jpg' },
+    { id: 9, name: 'Product 3', price: 50, image: 'https://i.pinimg.com/1200x/1b/25/fe/1b25fe26b62a75e9abb4b1c53e18e154.jpg' }
   ];
 
   const addToCart = (product) => {
